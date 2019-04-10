@@ -83,8 +83,8 @@
       <div>All Categories</div>
 
       <div class="row  ">
-          <div class="col-md-4 " *ngFor="let product of productData |searchFilter:searchTerm" [@photosAnimation]=product.length>
-
+          <div class="col-md-4 " *ngFor="let product of productData |searchFilter" [@photosAnimation]=product.length>
+            <!-- searchFilter:searchTerm" [@photosAnimation]=product.length> -->
         <!-- <div class="col-md-4 " *ngFor="let product of productData|searchFilter:searchTerm" [@photosAnimation]=product.length> -->
           <div class="card-body">
             <!-- <h5 class="card-title">Card title</h5>
