@@ -1,0 +1,39 @@
+<div class="clickdiv">
+  <button type="button" class="btn btn-primary" (click)="activatePipe()">Click for customPipe</button>
+  <button type="button" class="btn btn-primary" (click)="activateDirective()">Click for customDirective</button>
+  <button type="button" class="btn btn-primary" (click)="activatePipe()">Click for customPipe</button>
+  
+
+  
+  <div class="row firstCard" *ngIf="uppertab">
+
+    <div class="example-box" cdkDrag col-md-4>
+      Enter String SpclChar
+      <input [(ngModel)]="customPipe" #ctrl="ngModel">
+
+
+
+    </div>
+
+    <div class="example-box" cdkDrag col-md-4>
+
+      <p>Original Text->{{customPipe}}</p>
+    </div>
+    <div class="example-box" cdkDrag col-md-4>
+
+      <p>using Pipe
+        {{   customPipe | removeSpclChar:true }}</p>
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="fileUplod">
+  <input type="file"  appFileUplod />
+
+
+<div class="example-box" cdkDrag col-md-4>
+
+  <p>FileData--->{{fileData}}</p>
+</div>
+</div>

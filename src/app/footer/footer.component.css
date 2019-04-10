@@ -1,0 +1,18 @@
+.footer{
+    /* position: fixed; */
+    background-color: #fe3f3f;
+    color: #fff;
+    position: static;
+    bottom: 0;
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+}
+a{
+    color: #ffffff;
+    text-decoration:none
+}
+.btn{
+    background-color:  #ffffff;
+    
+}

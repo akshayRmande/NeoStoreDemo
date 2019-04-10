@@ -1,0 +1,124 @@
+<div class="listmainDiv row">
+  <div class="col-md-1"></div>
+  <div class="col-md-3">
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" 
+            data-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              Categories
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class="leftList" *ngFor="let c of category">
+              <i class="fa fa-dot-circle-o"></i>
+              <a (click)="filterApply(c.id)">{{c.category_name}}</a>
+
+            </div>
+            <!-- <div>
+                <i class="fa fa-dot-circle-o"></i>
+                <a>TABLE</a>
+  
+              </div>
+              <div>
+                  <i class="fa fa-dot-circle-o"></i>
+                  <a>SOFA</a>
+    
+                </div>
+                <div>
+                    <i class="fa fa-dot-circle-o"></i>
+                    <span>BED</span>
+      
+                  </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              Colors </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <button type="button" class="btn btn-dark" style="    border: 1px solid rgba(0, 0, 0, 0.24);
+            width: 34px;
+            height: 20px;
+            margin-top: 4px;
+        "></button>
+            <button type="button" class="btn btn-dark" style="    border: 1px solid rgba(0, 0, 0, 0.24);
+ width: 34px;
+ height: 20px;
+ margin-top: 4px;
+"></button> <button type="button" class="btn btn-dark" style="    border: 1px solid rgba(0, 0, 0, 0.24);
+            width: 34px;
+            height: 20px;
+            margin-top: 4px;
+        "></button> <button type="button" class="btn btn-dark" style="    border: 1px solid rgba(0, 0, 0, 0.24);
+            width: 34px;
+            height: 20px;
+            margin-top: 4px;
+        "></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-7 ">
+
+<!-- <div class="form-group">
+  <input type="search" class="form-control" placeholder="search here" style="width:300px"
+  [(ngModel)]="searchTerm">
+</div> -->
+
+
+    <div class="card " style="border:none">
+      <div>All Categories</div>
+
+      <div class="row  ">
+          <div class="col-md-4 " *ngFor="let product of productData|searchFilter:searchTerm" [@photosAnimation]=product.length>
+
+        <!-- <div class="col-md-4 " *ngFor="let product of productData|searchFilter:searchTerm" [@photosAnimation]=product.length> -->
+          <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a> -->
+            <div class="card">
+              <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+              <div class="card-body">
+                <div class="">
+                  <div class="in">
+                    <img style="height:150px; width:100%" [src]="product.images[0].ImgURL">
+                    <div>
+                      <h5><a> {{product.product_name}} </a></h5>
+                      <p> ${{product.product_cost}}</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="col-md-1"></div>
+
+
+
+</div>

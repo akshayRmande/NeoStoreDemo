@@ -1,0 +1,34 @@
+.mainDiv{
+     margin:20px 10% 20px 10%;
+}
+.text-center {
+    text-align: center;
+}
+.popularprod{
+    display: flex;
+    flex-direction: row;
+}
+.popularprod a{
+    padding: 5px;
+
+}
+
+.productList{
+padding: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.in{
+    border: 1px solid black;
+
+}
+.in img{
+    padding: 12px   
+}
+.productList  h5,p{
+    text-align: center
+}
+.productList a{
+    color: #337ab7
+}
